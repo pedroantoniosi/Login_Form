@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../Social Media/css/reg.css">
+    <title>Register</title>
+</head>
+
+<body>
+
+    <!-- --------- Register --------- -->
+    <div class="container-fluid text-light">
+        <div class="register p-4">
+            <div class="row">
+                <div class="col-md-6 d-flex flex-column mb-5 divisor">
+                    <h1 class="login-tittle text-center">Já Sou Cliente</h1>
+                    <form class="m-auto">
+                        <div class="login-form">
+                            <h1>Usuário</h1>
+                            <input id="login-username" type="text" placeholder="Email ou Celular" name="username">
+                            <h1>Senha</h1>
+                            <input id="login-password" type="password" placeholder="Senha" name="password" minlength="8"
+                                required>
+                        </div>
+                        <div class="captcha d-flex">
+                            <button  type="button" id="btn-validate" class="btn-captcha me-2"><i class="bi bi-check"></i></button>
+                            <div class="box-captcha"><p>Eu não sou robô</p></div>
+                        </div>
+                        <div class="text-center"><button class="btn">Logar</button></div>
+                    </form>
+                    <!-- <div class=”g-recaptcha” data-sitekey=”cole aqui a chave do site (site key)“></div> -->
+                    
+
+                </div>
+                <div class="col-md-6 d-flex flex-column ">
+                    <h1 class="register-tittle text-center">Sou novo Cliente</h1>
+                    <form class="m-auto">
+                        <div class="register-form">
+                            <h1>Nome Completo</h1>
+                            <input id="register-username" type="text" placeholder="Email ou Celular" name="username">
+                            <h1>Senha</h1>
+                            <input id="register-password" type="password" placeholder="Senha" name="password"
+                                minlength="8" required>
+                            <h1>Confirme Senha</h1>
+                            <input id="register-password" type="password" placeholder="Digite sua senha novamente"
+                                name="password" minlength="8" required>
+                            <h1>Data de Nascimento</h1>
+                            <input placeholder="" class="textbox-n" type="text" onfocus="(this.type='date')" id="date">
+
+                            <div class="d-flex">
+
+                            </div>
+                        </div>
+                    </form>
+                    <button class="btn" type="button">Cadastre-se</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- reCAPTCHA -->
+        <script src=’https://www.google.com/recaptcha/api.js’></script>
+        <!-- Jquery -->
+        <script src="../Social Media/Jquery/jquery-3.6.0.js"></script>
+        <script>
+
+            $(".bi-check").hide()
+            $("#btn-validate").click(() => {
+                $("#btn-validate").addClass("checked")
+                $(".bi-check").show()
+            })
+
+        </script>
+</body>
+
+</html>
